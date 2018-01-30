@@ -1,0 +1,4 @@
+GoogleSignIn Air Native Extension
+
+*Jan 30, 2018 - V1.0.0*
+* beginning of the journey!
