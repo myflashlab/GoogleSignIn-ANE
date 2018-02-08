@@ -225,7 +225,7 @@ none
 # Commercial Version
 http://www.myflashlabs.com/product/google-signin-ane-adobe-air-native-extension/
 
-![google-signin ANE](http://www.myflashlabs.com/wp-content/uploads/2018/02/product_adobe-air-ane-google-signin-595x738.jpg)
+![google-signin ANE](http://www.myflashlabs.com/wp-content/uploads/2018/01/product_adobe-air-ane-google-signin-595x738.jpg)
 
 # Tutorials
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
