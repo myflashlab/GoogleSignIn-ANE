@@ -1,10 +1,11 @@
-# GoogleSignIn ANE V1.0.0 for Android+iOS
+# GoogleSignIn ANE V1.1.0 for Android+iOS
 This AIR Native Extension will let your app user to sign-in to your app using their Google account. It also lets you specify what kind of permissions your app may need.
 
 **Main Features:**
 
 * SignIn/out from Google account.
 * Silent Sign-In feature to make sure users are signed in your app when relaunching the app.
+* Option for accessing the refresh_token and access_token
 * Option for requesting extra permissions when necessary.
 * Option for revoking access to the requested permissions.
 * Option for enabling Server-Side Access.
@@ -37,6 +38,10 @@ options.clientIdForiOS = "clientIdForiOS";
 
 // and pass the object to the initialization method of the ANE
 GSignIn.init(options);
+
+// If you want to access refresh_token and access_token on the client side, pass your web clientID and secret.
+GSignIn.rest.webClientId = "WebClientId";
+GSignIn.rest.webClientSecret = "WebClientSecret";
 
 // Then, add listeners
 GSignIn.listener.addEventListener(GSignInEvents.SILENT_SIGNIN_SUCCESS, onSilentSigninSuccess);
@@ -109,6 +114,28 @@ private function showUserInfo($account:GAccount):void
 		trace("\t" + $account.scopes[i]);
 	}
 	trace("serverAuthCode: " + 	$account.serverAuthCode);
+
+	// when you receive the serverAuthCode, you can request for refresh_token like below.
+	// However, it is recommended that you pass the serverAuthCode to your server and do 
+	// this on server side.
+	GSignIn.rest.getTokens($account.serverAuthCode, onTokensResult);
+
+	function onTokensResult($restTokens:GRestTokens, $error:Error):void
+	{
+		if($error)
+		{
+			trace($error.message);
+			return;
+		}
+		
+		trace("------------------------------");
+		trace("access_token: " + 	$restTokens.access_token);
+		trace("token_type: " + 		$restTokens.token_type);
+		trace("expires_in: " + 		$restTokens.expires_in);
+		trace("refresh_token: " + 	$restTokens.refresh_token);
+		trace("id_token: " + 		$restTokens.id_token);
+		trace("------------------------------");
+	}
 }
 ```
 
@@ -231,5 +258,8 @@ http://www.myflashlabs.com/product/google-signin-ane-adobe-air-native-extension/
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*Feb 12, 2018 - V1.1.0*
+* Added ```GRest``` and ```GRestTokens``` classes which can be used for accesing refresh_token and access_token with the help of ```GSignIn.rest.getTokens``` method. Checkou the [Main.as](https://github.com/myflashlab/GoogleSignIn-ANE/blob/master/AIR/src/Main.as) file for usage sample.
+
 *Jan 30, 2018 - V1.0.0*
 * beginning of the journey!

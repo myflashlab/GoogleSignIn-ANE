@@ -44,6 +44,8 @@ public class Main extends Sprite
 	private var _list:List;
 	private var _numRows:int = 1;
 	
+	private var _serverAuthCode:String;
+	
 	public function Main():void
 	{
 		Multitouch.inputMode = MultitouchInputMode.GESTURE;
@@ -163,6 +165,10 @@ public class Main extends Sprite
 		// and pass the object to the initialization method of the ANE
 		GSignIn.init(options);
 		
+		// If you want to access refresh_token and access_token on the client side, pass your web clientID and secret.
+		GSignIn.rest.webClientId = "webClientId";
+		GSignIn.rest.webClientSecret = "webClientSecret";
+		
 		// Then, add listeners
 		GSignIn.listener.addEventListener(GSignInEvents.SILENT_SIGNIN_SUCCESS, onSilentSigninSuccess);
 		GSignIn.listener.addEventListener(GSignInEvents.SILENT_SIGNIN_FAILURE, onSilentSigninFailure);
@@ -261,6 +267,40 @@ public class Main extends Sprite
 		
 		//----------------------------------------------------------------------
 		
+		var btn5:MySprite = createBtn("getTokens");
+		btn5.addEventListener(MouseEvent.CLICK, getTokens);
+		_list.add(btn5);
+		
+		function getTokens(e:MouseEvent):void
+		{
+			if(!_serverAuthCode)
+			{
+				C.log("serverAuthCode must be available for this method to work");
+				return;
+			}
+			
+			GSignIn.rest.getTokens(_serverAuthCode, onTokensResult);
+		}
+		
+		function onTokensResult($restTokens:GRestTokens, $error:Error):void
+		{
+			if($error)
+			{
+				trace($error.message);
+				return;
+			}
+			
+			trace("------------------------------");
+			trace("access_token: " + 	$restTokens.access_token);
+			trace("token_type: " + 		$restTokens.token_type);
+			trace("expires_in: " + 		$restTokens.expires_in);
+			trace("refresh_token: " + 	$restTokens.refresh_token);
+			trace("id_token: " + 		$restTokens.id_token);
+			trace("------------------------------");
+		}
+		
+		//----------------------------------------------------------------------
+		
 		
 	}
 	
@@ -340,6 +380,8 @@ public class Main extends Sprite
 	
 	private function showUserInfo($account:GAccount):void
 	{
+		_serverAuthCode = $account.serverAuthCode;
+		
 		C.log("displayName: " + 	$account.displayName);
 		C.log("email: " + 			$account.email);
 		C.log("familyName: " + 		$account.familyName);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <application xmlns="http://ns.adobe.com/air/application/28.0">
     <id>com.doitflash.googleSignin</id>
-    <versionNumber>1.0.0</versionNumber>
+    <versionNumber>1.1.0</versionNumber>
     <supportedProfiles>mobileDevice</supportedProfiles>
     <filename>exGoogleSignin</filename>
     <name>Google Signin</name>

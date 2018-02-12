@@ -1,4 +1,7 @@
 GoogleSignIn Air Native Extension
 
+*Feb 12, 2018 - V1.1.0*
+* Added ```GRest``` and ```GRestTokens``` classes which can be used for accesing refresh_token and access_token with the help of ```GSignIn.rest.getTokens``` method. Checkou the [Main.as](https://github.com/myflashlab/GoogleSignIn-ANE/blob/master/AIR/src/Main.as) file for usage sample.
+
 *Jan 30, 2018 - V1.0.0*
 * beginning of the journey!
