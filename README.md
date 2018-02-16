@@ -1,4 +1,4 @@
-# GoogleSignIn ANE V1.1.0 for Android+iOS
+# GoogleSignIn ANE V1.1.1 for Android+iOS
 This AIR Native Extension will let your app user to sign-in to your app using their Google account. It also lets you specify what kind of permissions your app may need.
 
 **Main Features:**
@@ -28,6 +28,7 @@ import com.myflashlab.air.extensions.gSignIn.*;
 
 // depending on your app design, you must customize the Signin Options
 var options:GSignInOptions = new GSignInOptions();
+options.gamesSignIn = false; // (Android only) set to true if you are working with Google Games Services ANE.
 options.requestIdToken ="serverClientId"; // get the client ID of your server
 options.requestServerAuthCode = "serverClientId"; // get the client ID of your server
 options.requestEmail = true;
@@ -258,6 +259,10 @@ http://www.myflashlabs.com/product/google-signin-ane-adobe-air-native-extension/
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*Feb 15, 2018 - V1.1.1*
+* Added ```GSignIn.rest.tokenInfo``` and ```GSignIn.rest.refreshAccessToken``` to let you manage tokens easier. For more information on how to use them, read the [asdoc](http://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/gSignIn/GRest.html) and sample [.as codes](https://github.com/myflashlab/GoogleSignIn-ANE/blob/master/AIR/src/Main.as).
+* Added [gamesSignIn](http://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/gSignIn/GSignInOptions.html#gamesSignIn) setter to the ```GSignInOptions``` class. Useful when you are using the [Games Services ANE](https://github.com/myflashlab/GameServices-ANE).
+
 *Feb 12, 2018 - V1.1.0*
 * Added ```GRest``` and ```GRestTokens``` classes which can be used for accesing refresh_token and access_token with the help of ```GSignIn.rest.getTokens``` method. Checkou the [Main.as](https://github.com/myflashlab/GoogleSignIn-ANE/blob/master/AIR/src/Main.as) file for usage sample.
 

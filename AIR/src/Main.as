@@ -154,6 +154,7 @@ public class Main extends Sprite
 		
 		// depending on your app design, you must customize the Signin Options
 		var options:GSignInOptions = new GSignInOptions();
+		options.gamesSignIn = false; // (Android only) set to true if you are working with Google Games Services ANE.
 		options.requestIdToken = "serverClientId"; // get the client ID of your server
 		options.requestServerAuthCode = "serverClientId"; // get the client ID of your server
 		options.requestEmail = true;
@@ -301,7 +302,37 @@ public class Main extends Sprite
 		
 		//----------------------------------------------------------------------
 		
+		var btn6:MySprite = createBtn("tokenInfo");
+		btn6.addEventListener(MouseEvent.CLICK, tokenInfo);
+		_list.add(btn6);
 		
+		function tokenInfo(e:MouseEvent):void
+		{
+			if(!_idToken)
+			{
+				C.log("idToken must be available for this method to work");
+				return;
+			}
+			
+			GSignIn.rest.tokenInfo(_idToken, onTokensInfoResult);
+		}
+		
+		function onTokensInfoResult($info:Object, $error:Error):void
+		{
+			if($error)
+			{
+				trace($error.message);
+				return;
+			}
+			
+			// read more about tokeninfo here:
+			// https://developers.google.com/identity/sign-in/web/backend-auth#calling-the-tokeninfo-endpoint
+			trace("------------------------------");
+			trace(JSON.stringify($info));
+			trace("------------------------------");
+		}
+		
+		//----------------------------------------------------------------------
 	}
 	
 	private function onRequestSuccess(e:GSignInEvents):void

@@ -1,5 +1,9 @@
 GoogleSignIn Air Native Extension
 
+*Feb 15, 2018 - V1.1.1*
+* Added ```GSignIn.rest.tokenInfo``` and ```GSignIn.rest.refreshAccessToken``` to let you manage tokens easier. For more information on how to use them, read the [asdoc](http://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/gSignIn/GRest.html) and sample [.as codes](https://github.com/myflashlab/GoogleSignIn-ANE/blob/master/AIR/src/Main.as).
+* Added [gamesSignIn](http://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/gSignIn/GSignInOptions.html#gamesSignIn) setter to the ```GSignInOptions``` class. Useful when you are using the [Games Services ANE](https://github.com/myflashlab/GameServices-ANE).
+
 *Feb 12, 2018 - V1.1.0*
 * Added ```GRest``` and ```GRestTokens``` classes which can be used for accesing refresh_token and access_token with the help of ```GSignIn.rest.getTokens``` method. Checkou the [Main.as](https://github.com/myflashlab/GoogleSignIn-ANE/blob/master/AIR/src/Main.as) file for usage sample.
 
