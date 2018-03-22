@@ -1,4 +1,4 @@
-# GoogleSignIn ANE V1.1.1 for Android+iOS
+# GoogleSignIn ANE V1.1.3 for Android+iOS
 This AIR Native Extension will let your app user to sign-in to your app using their Google account. It also lets you specify what kind of permissions your app may need.
 
 **Main Features:**
@@ -259,6 +259,9 @@ http://www.myflashlabs.com/product/google-signin-ane-adobe-air-native-extension/
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*Mar 22, 2018 - V1.1.3*
+* Optimized for GoogleGamesServices V4.0.0+
+
 *Feb 15, 2018 - V1.1.1*
 * Added ```GSignIn.rest.tokenInfo``` and ```GSignIn.rest.refreshAccessToken``` to let you manage tokens easier. For more information on how to use them, read the [asdoc](http://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/gSignIn/GRest.html) and sample [.as codes](https://github.com/myflashlab/GoogleSignIn-ANE/blob/master/AIR/src/Main.as).
 * Added [gamesSignIn](http://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/gSignIn/GSignInOptions.html#gamesSignIn) setter to the ```GSignInOptions``` class. Useful when you are using the [Games Services ANE](https://github.com/myflashlab/GameServices-ANE).
