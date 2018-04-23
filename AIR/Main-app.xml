@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/28.0">
+<application xmlns="http://ns.adobe.com/air/application/29.0">
     <id>com.doitflash.googleSignin</id>
-    <versionNumber>1.1.1</versionNumber>
+    <versionNumber>1.2.0</versionNumber>
     <supportedProfiles>mobileDevice</supportedProfiles>
     <filename>exGoogleSignin</filename>
     <name>Google Signin</name>
@@ -14,7 +14,7 @@
 	<!--The new Permission thing on Android works ONLY if you are targeting Android SDK 23 or higher-->
 	<uses-sdk android:targetSdkVersion="23"/>
 	
-	<application>
+	<application android:name="android.support.multidex.MultiDexApplication">
 		
 		<activity>
 			<intent-filter>

@@ -1,5 +1,10 @@
 GoogleSignIn Air Native Extension
 
+*Apr 22, 2018 - V1.2.0*
+* updated to [iOS SDK V4.1.2](https://developers.google.com/identity/sign-in/ios/sdk/google_signin_sdk_4_1_2.zip) to be synced with Firebase ANEs V6.5.0 which uses Firebase iOS SDK V4.11.0. make sure you are updating the frameworks to this version.
+* updated to Android dependencies V12.0.1 make sure you are updating the dependency ANEs to this version
+* add ```android:name="android.support.multidex.MultiDexApplication"``` to the manifest main application tag to work correctly on older Android versions.
+
 *Mar 22, 2018 - V1.1.3*
 * Optimized for GoogleGamesServices V4.0.0+
 

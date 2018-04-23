@@ -1,4 +1,4 @@
-# GoogleSignIn ANE V1.1.3 for Android+iOS
+# GoogleSignIn ANE V1.2.0 for Android+iOS
 This AIR Native Extension will let your app user to sign-in to your app using their Google account. It also lets you specify what kind of permissions your app may need.
 
 **Main Features:**
@@ -12,7 +12,7 @@ This AIR Native Extension will let your app user to sign-in to your app using th
 * Option to authenticate with a backend server.
 
 # asdoc
-[find the latest asdoc for this ANE here.](http://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/gSignIn/package-detail.html)
+[find the latest asdoc for this ANE here.](https://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/gSignIn/package-detail.html)
 
 [Download demo ANE](https://github.com/myflashlab/GoogleSignIn-ANE/tree/master/AIR/lib)
 
@@ -151,7 +151,7 @@ FOR ANDROID:
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 	<uses-sdk android:targetSdkVersion="23"/>
 	
-	<application>
+	<application android:name="android.support.multidex.MultiDexApplication">
 		
 		<activity 
 			android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
@@ -234,10 +234,10 @@ Embedding the ANE:
   * googlePlayServices_tasks.ane
 * Even if you are building for iOS only, you'd still need **overrideAir.ane**.
 * On the iOS side, you need to make sure you have included the resource, "GoogleSignIn.bundle" at the root of you package. 
-* On the iOS side, you will need **GoogleSignIn.framework** and **GoogleSignInDependencies.framework** available in your *AIR_SDK/lib/aot/stub* folder. Download them from [this package - GSignin SDK V4.1.1](https://developers.google.com/identity/sign-in/ios/sdk/google_signin_sdk_4_1_1.zip).
+* On the iOS side, you will need **GoogleSignIn.framework** and **GoogleSignInDependencies.framework** available in your *AIR_SDK/lib/aot/stub* folder. Download them from [this package - GSignin SDK V4.1.2](https://developers.google.com/identity/sign-in/ios/sdk/google_signin_sdk_4_1_2.zip).
 * Android API 15 or higher
 * iOS SDK 9.0 or higher
-* AIR SDK 28.0
+* AIR SDK 29.0
 
 # Permissions
 If you are targeting AIR 24 or higher, you need to [take care of the permissions manually](http://www.myflashlabs.com/adobe-air-app-permissions-android-ios/). Below are the list of Permissions this ANE might require. (Note: *Necessary Permissions* are those that the ANE will NOT work without them and *Optional Permissions* are those which are needed only if you are using some specific features in the ANE.)
@@ -253,12 +253,17 @@ none
 # Commercial Version
 http://www.myflashlabs.com/product/google-signin-ane-adobe-air-native-extension/
 
-![google-signin ANE](http://www.myflashlabs.com/wp-content/uploads/2018/01/product_adobe-air-ane-google-signin-595x738.jpg)
+![google-signin ANE](https://www.myflashlabs.com/wp-content/uploads/2018/01/product_adobe-air-ane-google-signin-595x738.jpg)
 
 # Tutorials
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*Apr 22, 2018 - V1.2.0*
+* updated to [iOS SDK V4.1.2](https://developers.google.com/identity/sign-in/ios/sdk/google_signin_sdk_4_1_2.zip) to be synced with Firebase ANEs V6.5.0 which uses Firebase iOS SDK V4.11.0. make sure you are updating the frameworks to this version.
+* updated to Android dependencies V12.0.1 make sure you are updating the dependency ANEs to this version
+* add ```android:name="android.support.multidex.MultiDexApplication"``` to the manifest main application tag to work correctly on older Android versions.
+
 *Mar 22, 2018 - V1.1.3*
 * Optimized for GoogleGamesServices V4.0.0+
 
