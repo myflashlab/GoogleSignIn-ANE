@@ -1,5 +1,16 @@
 GoogleSignIn Air Native Extension
 
+*Sep 20, 2018 - V1.3.0*
+* updated Android dependencies to V15.0.1 and replaced AndroidSupport with its sub dependencies. The ANE now depends on the following:
+    * com.myflashlab.air.extensions.dependency.overrideAir
+    * com.myflashlab.air.extensions.dependency.androidSupport.arch
+    * com.myflashlab.air.extensions.dependency.androidSupport.core
+    * com.myflashlab.air.extensions.dependency.androidSupport.v4
+    * com.myflashlab.air.extensions.dependency.googlePlayServices.auth
+    * com.myflashlab.air.extensions.dependency.googlePlayServices.base
+    * com.myflashlab.air.extensions.dependency.googlePlayServices.basement
+    * com.myflashlab.air.extensions.dependency.googlePlayServices.tasks
+
 *Apr 22, 2018 - V1.2.0*
 * updated to [iOS SDK V4.1.2](https://developers.google.com/identity/sign-in/ios/sdk/google_signin_sdk_4_1_2.zip) to be synced with Firebase ANEs V6.5.0 which uses Firebase iOS SDK V4.11.0. make sure you are updating the frameworks to this version.
 * updated to Android dependencies V12.0.1 make sure you are updating the dependency ANEs to this version

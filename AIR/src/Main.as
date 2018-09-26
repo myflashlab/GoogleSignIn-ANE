@@ -14,9 +14,15 @@ import flash.display.Sprite;
 import flash.display.StageAlign;
 import flash.display.StageScaleMode;
 import flash.events.Event;
+import flash.events.IOErrorEvent;
 import flash.events.InvokeEvent;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
+import flash.net.URLLoader;
+import flash.net.URLRequest;
+import flash.net.URLRequestHeader;
+import flash.net.URLRequestMethod;
+import flash.net.URLVariables;
 import flash.text.AntiAliasType;
 import flash.text.TextField;
 import flash.text.TextFieldAutoSize;
@@ -32,7 +38,7 @@ import com.myflashlab.air.extensions.gSignIn.*;
 
 /**
  * ...
- * @author Hadi Tavakoli - 1/30/2018 11:25 AM
+ * @author Hadi Tavakoli - 5/22/2016 11:25 AM
  */
 public class Main extends Sprite
 {
@@ -45,6 +51,7 @@ public class Main extends Sprite
 	private var _numRows:int = 1;
 	
 	private var _serverAuthCode:String;
+	private var _idToken:String;
 	
 	public function Main():void
 	{
@@ -412,6 +419,7 @@ public class Main extends Sprite
 	private function showUserInfo($account:GAccount):void
 	{
 		_serverAuthCode = $account.serverAuthCode;
+		_idToken = $account.idToken;
 		
 		C.log("displayName: " + 	$account.displayName);
 		C.log("email: " + 			$account.email);
@@ -419,12 +427,14 @@ public class Main extends Sprite
 		C.log("givenName: " + 		$account.givenName);
 		C.log("id: " + 				$account.id);
 		C.log("idToken: " + 		$account.idToken);
+		trace("idToken: " + 		$account.idToken);
 		C.log("photoUrl: " + 		$account.photoUrl);
 		for(var i:int=0; i < $account.scopes.length; i++)
 		{
 			C.log("\t" + $account.scopes[i]);
 		}
 		C.log("serverAuthCode: " + 	$account.serverAuthCode);
+		trace("serverAuthCode: " + 	$account.serverAuthCode);
 	}
 	
 	

@@ -1,4 +1,4 @@
-# GoogleSignIn ANE V1.2.0 for Android+iOS
+# GoogleSignIn ANE V1.3.0 for Android+iOS
 This AIR Native Extension will let your app user to sign-in to your app using their Google account. It also lets you specify what kind of permissions your app may need.
 
 **Main Features:**
@@ -149,7 +149,7 @@ FOR ANDROID:
 	
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-	<uses-sdk android:targetSdkVersion="23"/>
+	<uses-sdk android:targetSdkVersion="26"/>
 	
 	<application android:name="android.support.multidex.MultiDexApplication">
 		
@@ -213,42 +213,23 @@ Embedding the ANE:
 
         <!-- Download dependency ANEs from https://github.com/myflashlab/common-dependencies-ANE -->
         <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
-        <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
-        <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.auth</extensionID>
-        <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.auth.base</extensionID>
-        <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
-        <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
-        <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.tasks</extensionID>
+    	<extensionID>com.myflashlab.air.extensions.dependency.androidSupport.arch</extensionID>
+    	<extensionID>com.myflashlab.air.extensions.dependency.androidSupport.core</extensionID>
+    	<extensionID>com.myflashlab.air.extensions.dependency.androidSupport.v4</extensionID>
+    	<extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.auth</extensionID>
+    	<extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
+    	<extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
+    	<extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.tasks</extensionID>
   </extensions>
 -->
 ```
 
 # Requirements
-* This ANE is dependent on the following ANEs, found [here](https://github.com/myflashlab/common-dependencies-ANE).
-  * androidSupport.ane
-  * overrideAir.ane
-  * googlePlayServices_auth.ane
-  * googlePlayServices_authBase.ane
-  * googlePlayServices_base.ane
-  * googlePlayServices_basement.ane
-  * googlePlayServices_tasks.ane
-* Even if you are building for iOS only, you'd still need **overrideAir.ane**.
 * On the iOS side, you need to make sure you have included the resource, "GoogleSignIn.bundle" at the root of you package. 
 * On the iOS side, you will need **GoogleSignIn.framework** and **GoogleSignInDependencies.framework** available in your *AIR_SDK/lib/aot/stub* folder. Download them from [this package - GSignin SDK V4.1.2](https://developers.google.com/identity/sign-in/ios/sdk/google_signin_sdk_4_1_2.zip).
 * Android API 15 or higher
 * iOS SDK 9.0 or higher
-* AIR SDK 29.0
-
-# Permissions
-If you are targeting AIR 24 or higher, you need to [take care of the permissions manually](http://www.myflashlabs.com/adobe-air-app-permissions-android-ios/). Below are the list of Permissions this ANE might require. (Note: *Necessary Permissions* are those that the ANE will NOT work without them and *Optional Permissions* are those which are needed only if you are using some specific features in the ANE.)
-
-Check out the demo project available at this repository to see how we have used our [PermissionCheck ANE](http://www.myflashlabs.com/product/native-access-permission-check-settings-menu-air-native-extension/) to ask for the permissions.
-
-**Necessary Permissions:**  
-none
-
-**Optional Permissions:**  
-none
+* AIR SDK 30.0
 
 # Commercial Version
 http://www.myflashlabs.com/product/google-signin-ane-adobe-air-native-extension/
@@ -259,6 +240,17 @@ http://www.myflashlabs.com/product/google-signin-ane-adobe-air-native-extension/
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*Sep 20, 2018 - V1.3.0*
+* updated Android dependencies to V15.0.1 and replaced AndroidSupport with its sub dependencies. The ANE now depends on the following:
+    * com.myflashlab.air.extensions.dependency.overrideAir
+    * com.myflashlab.air.extensions.dependency.androidSupport.arch
+    * com.myflashlab.air.extensions.dependency.androidSupport.core
+    * com.myflashlab.air.extensions.dependency.androidSupport.v4
+    * com.myflashlab.air.extensions.dependency.googlePlayServices.auth
+    * com.myflashlab.air.extensions.dependency.googlePlayServices.base
+    * com.myflashlab.air.extensions.dependency.googlePlayServices.basement
+    * com.myflashlab.air.extensions.dependency.googlePlayServices.tasks
+
 *Apr 22, 2018 - V1.2.0*
 * updated to [iOS SDK V4.1.2](https://developers.google.com/identity/sign-in/ios/sdk/google_signin_sdk_4_1_2.zip) to be synced with Firebase ANEs V6.5.0 which uses Firebase iOS SDK V4.11.0. make sure you are updating the frameworks to this version.
 * updated to Android dependencies V12.0.1 make sure you are updating the dependency ANEs to this version
