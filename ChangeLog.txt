@@ -1,5 +1,13 @@
 GoogleSignIn Air Native Extension
 
+*Oct 11, 2018 - V1.4.0*
+* Fixed [issue #19](https://github.com/myflashlab/GoogleSignIn-ANE/issues/19), To make sure GoogleSignIn ANE frameworks don't conflict with Firebase frameworks, we are copying dependency frameworks from Firebase instead of GoogleSignIn SDK directly.
+* Remove ```GoogleSignInDependencies.framework``` from your ```AIR-SDK/lib/aot/stub```.
+* Download [Firebase SDK V5.4.1](https://dl.google.com/firebase/sdk/ios/5_4_1/Firebase-5.4.1.zip) then copy the follwoing frameworks to your ```AIR-SDK/lib/aot/stub``` library.
+  * Invites/GTMSessionFetcher.framework
+  * Invites/GTMOAuth2.framework
+  * Analytics/GoogleToolboxForMac.framework
+
 *Sep 20, 2018 - V1.3.0*
 * updated Android dependencies to V15.0.1 and replaced AndroidSupport with its sub dependencies. The ANE now depends on the following:
     * com.myflashlab.air.extensions.dependency.overrideAir

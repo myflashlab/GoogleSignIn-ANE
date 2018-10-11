@@ -1,4 +1,4 @@
-# GoogleSignIn ANE V1.3.0 for Android+iOS
+# GoogleSignIn ANE V1.4.0 for Android+iOS
 This AIR Native Extension will let your app user to sign-in to your app using their Google account. It also lets you specify what kind of permissions your app may need.
 
 **Main Features:**
@@ -225,8 +225,11 @@ Embedding the ANE:
 ```
 
 # Requirements
-* On the iOS side, you need to make sure you have included the resource, "GoogleSignIn.bundle" at the root of you package. 
-* On the iOS side, you will need **GoogleSignIn.framework** and **GoogleSignInDependencies.framework** available in your *AIR_SDK/lib/aot/stub* folder. Download them from [this package - GSignin SDK V4.1.2](https://developers.google.com/identity/sign-in/ios/sdk/google_signin_sdk_4_1_2.zip).
+* On the iOS side, you will need to copy the following frameworks to your ```AIR_SDK/lib/aot/stub``` folder. Download them from [this package - Firebase SDK V5.4.1](https://dl.google.com/firebase/sdk/ios/5_4_1/Firebase-5.4.1.zip).
+  * Invites/GTMSessionFetcher.framework
+  * Invites/GTMOAuth2.framework
+  * Analytics/GoogleToolboxForMac.framework
+* On the iOS side, you need to make sure you have included the resource, "GoogleSignIn.bundle" at the root of you package. Find it in [Firebase SDK V5.4.1](https://dl.google.com/firebase/sdk/ios/5_4_1/Firebase-5.4.1.zip) at ```Invites/Resources/GoogleSignIn.bundle```
 * Android API 15 or higher
 * iOS SDK 9.0 or higher
 * AIR SDK 30.0
@@ -240,6 +243,14 @@ http://www.myflashlabs.com/product/google-signin-ane-adobe-air-native-extension/
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*Oct 11, 2018 - V1.4.0*
+* Fixed [issue #19](https://github.com/myflashlab/GoogleSignIn-ANE/issues/19), To make sure GoogleSignIn ANE frameworks don't conflict with Firebase frameworks, we are copying dependency frameworks from Firebase instead of GoogleSignIn SDK directly.
+* Remove ```GoogleSignInDependencies.framework``` from your ```AIR-SDK/lib/aot/stub```.
+* Download [Firebase SDK V5.4.1](https://dl.google.com/firebase/sdk/ios/5_4_1/Firebase-5.4.1.zip) then copy the follwoing frameworks to your ```AIR-SDK/lib/aot/stub``` library.
+  * Invites/GTMSessionFetcher.framework
+  * Invites/GTMOAuth2.framework
+  * Analytics/GoogleToolboxForMac.framework
+
 *Sep 20, 2018 - V1.3.0*
 * updated Android dependencies to V15.0.1 and replaced AndroidSupport with its sub dependencies. The ANE now depends on the following:
     * com.myflashlab.air.extensions.dependency.overrideAir
