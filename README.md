@@ -1,4 +1,4 @@
-# GoogleSignIn ANE V1.4.0 for Android+iOS
+# GoogleSignIn ANE V1.4.1 for Android+iOS
 This AIR Native Extension will let your app user to sign-in to your app using their Google account. It also lets you specify what kind of permissions your app may need.
 
 **Main Features:**
@@ -243,6 +243,10 @@ http://www.myflashlabs.com/product/google-signin-ane-adobe-air-native-extension/
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*Nov 18, 2018 - V1.4.1*
+* Works with OverrideAir ANE V5.6.1 or higher
+* Works with ANELAB V1.1.26 or higher
+
 *Oct 11, 2018 - V1.4.0*
 * Fixed [issue #19](https://github.com/myflashlab/GoogleSignIn-ANE/issues/19), To make sure GoogleSignIn ANE frameworks don't conflict with Firebase frameworks, we are copying dependency frameworks from Firebase instead of GoogleSignIn SDK directly.
 * Remove ```GoogleSignInDependencies.framework``` from your ```AIR-SDK/lib/aot/stub```.

@@ -1,5 +1,9 @@
 GoogleSignIn Air Native Extension
 
+*Nov 18, 2018 - V1.4.1*
+* Works with OverrideAir ANE V5.6.1 or higher
+* Works with ANELAB V1.1.26 or higher
+
 *Oct 11, 2018 - V1.4.0*
 * Fixed [issue #19](https://github.com/myflashlab/GoogleSignIn-ANE/issues/19), To make sure GoogleSignIn ANE frameworks don't conflict with Firebase frameworks, we are copying dependency frameworks from Firebase instead of GoogleSignIn SDK directly.
 * Remove ```GoogleSignInDependencies.framework``` from your ```AIR-SDK/lib/aot/stub```.
