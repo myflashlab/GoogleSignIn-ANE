@@ -235,9 +235,9 @@ Embedding the ANE:
 * AIR SDK 30.0
 
 # Commercial Version
-http://www.myflashlabs.com/product/google-signin-ane-adobe-air-native-extension/
+https://www.myflashlabs.com/product/google-signin-ane-adobe-air-native-extension/
 
-![google-signin ANE](https://www.myflashlabs.com/wp-content/uploads/2018/01/product_adobe-air-ane-google-signin-595x738.jpg)
+[![google-signin ANE](https://www.myflashlabs.com/wp-content/uploads/2018/01/product_adobe-air-ane-google-signin-2018-595x738.jpg)](https://www.myflashlabs.com/product/google-signin-ane-adobe-air-native-extension/)
 
 # Tutorials
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
