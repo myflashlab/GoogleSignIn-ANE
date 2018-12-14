@@ -149,15 +149,13 @@ public class Main extends Sprite
 		}
 	}
 	
-	private function myDebuggerDelegate($ane:String, $class:String, $msg:String):void
-	{
-		trace("["+$ane+"-"+$class+"]"+$msg);
-	}
-	
 	private function init():void
 	{
-		// remove this line when building for production
-		OverrideAir.enableDebugger(myDebuggerDelegate);
+		// Remove OverrideAir debugger in production builds
+		OverrideAir.enableDebugger(function ($ane:String, $class:String, $msg:String):void
+		{
+			trace($ane+" ("+$class+") "+$msg);
+		});
 		
 		// depending on your app design, you must customize the Signin Options
 		var options:GSignInOptions = new GSignInOptions();
