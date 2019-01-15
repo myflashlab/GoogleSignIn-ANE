@@ -1,5 +1,8 @@
 GoogleSignIn Air Native Extension
 
+*Jan 15, 2019 - V1.4.3*
+* Fixed a problem on iOS 10 and 9 which the login process didn't return the results successfully back to the AIR app
+
 *Nov 18, 2018 - V1.4.1*
 * Works with OverrideAir ANE V5.6.1 or higher
 * Works with ANELAB V1.1.26 or higher
