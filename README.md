@@ -15,7 +15,7 @@ This AIR Native Extension will let your app user to sign-in to your app using th
 
 # Configure GSignin on Google API Console
 For Android, visit [this page](https://developers.google.com/identity/sign-in/android/start-integrating#configure_a_console_name_project) and click on the button **Configure a project** to start setting up your API. notice that AIR will add *air.* at the beginning of your app package name.  
-For iOS, visit [here](https://developers.google.com/identity/sign-in/ios/start-integrating#get-config) and click on the button **Get a Configuration File**.
+For iOS, visit [here](https://developers.google.com/identity/sign-in/ios/start-integrating#get-config) and click on the button **Create an OAuth Client ID**.
 
 # AIR Usage
 For the complete AS3 code usage, see the [demo project here](https://github.com/myflashlab/GoogleSignIn-ANE/blob/master/AIR/src/Main.as).
@@ -223,6 +223,7 @@ Embedding the ANE:
 
 # Requirements
 * On the iOS side, you will need to copy the following frameworks to your ```AIR_SDK/lib/aot/stub``` folder. Download them from [this package - Firebase SDK V5.4.1](https://dl.google.com/firebase/sdk/ios/5_4_1/Firebase-5.4.1.zip).
+  * Invites/GoogleSignIn.framework
   * Invites/GTMSessionFetcher.framework
   * Invites/GTMOAuth2.framework
   * Analytics/GoogleToolboxForMac.framework
