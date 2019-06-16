@@ -1,5 +1,15 @@
 GoogleSignIn Air Native Extension
 
+*Jun 16, 2019 - V2.0.0*
+* updated Android dependencies to V16.0.1
+* updated to GoogleSignin iOS SDK V4.4.0 which is synced with Firebase ANEs collection V8.x.x, you should copy the following frameworks to your ```AIR SDK/lib/aot/stub```. [Get the frameworks from Firebase iOS SDK V5.20.2](https://dl.google.com/firebase/sdk/ios/5_20_2/Firebase-5.20.2.zip).
+  * Firebase/Invites/GoogleSignIn.framework
+  * Firebase/Invites/GTMSessionFetcher.framework
+  * Firebase/Invites/GoogleToolboxForMac.framework
+* Also Make sure to replace the *GoogleSignIn.bundle* file with the latest version found at *Firebase/Invites/Resources/GoogleSignIn.bundle*
+* min iOS version to support this ANE will be 10.0+ from now on.
+* min Android API version to support this ANE will be 19+ from now on.
+
 *Jan 15, 2019 - V1.4.3*
 * Fixed a problem on iOS 10 and 9 which the login process didn't return the results successfully back to the AIR app
 

@@ -162,10 +162,11 @@ public class Main extends Sprite
 		options.gamesSignIn = false; // (Android only) set to true if you are working with Google Games Services ANE.
 		options.requestIdToken = "serverClientId"; // get the client ID of your server
 		options.requestServerAuthCode = "serverClientId"; // get the client ID of your server
+		options.forceCodeForRefreshToken = true;
 		options.requestEmail = true;
 		options.requestProfile = true;
 		options.requestId = true;
-		// get the iOS clientID from the .plist file you downloaded when you were setting up the GSignin
+		// get the iOS clientID from the .plist file you downloaded from Google when you were setting up the GSignin
 		options.clientIdForiOS = "clientIdForiOS";
 		
 		// and pass the object to the initialization method of the ANE

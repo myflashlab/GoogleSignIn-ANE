@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/31.0">
+<application xmlns="http://ns.adobe.com/air/application/32.0">
     <id>com.doitflash.googleSignin</id>
-    <versionNumber>1.4.3</versionNumber>
+    <versionNumber>2.0.0</versionNumber>
     <supportedProfiles>mobileDevice</supportedProfiles>
     <filename>exGoogleSignin</filename>
     <name>Google Signin</name>
@@ -40,9 +40,9 @@
 	<iPhone>
 		<InfoAdditions><![CDATA[
 	
-		<!--iOS 9.0 or higher can support this ANE-->
+		<!--iOS 10.0 or higher can support this ANE-->
 		<key>MinimumOSVersion</key>
-		<string>9.0</string>
+		<string>10.0</string>
 		 
 		<key>UIPrerenderedIcon</key>
 		<true/>
@@ -68,7 +68,7 @@
 				<string>google</string>
 				<key>CFBundleURLSchemes</key>
 				<array>
-					<string>com.googleusercontent.apps.626036754783-rnrn732hrq66ev2h5g6475kj98rm2dh0</string>
+					<string>com.googleusercontent.apps.626036754783-rnrn732hrq66ev2h5g6475kj98rm2dh</string>
 				</array>
 			</dict>
 		</array>

@@ -179,9 +179,9 @@ FOR ANDROID:
 <!--
 FOR iOS:
 -->
-	<!--iOS 9.0 or higher can support this ANE-->
+	<!--iOS 10.0 or higher can support this ANE-->
 	<key>MinimumOSVersion</key>
-	<string>9.0</string>
+	<string>10.0</string>
 	
 	<key>CFBundleURLTypes</key>
 		<array>
@@ -222,14 +222,13 @@ Embedding the ANE:
 ```
 
 # Requirements
-* On the iOS side, you will need to copy the following frameworks to your ```AIR_SDK/lib/aot/stub``` folder. Download them from [this package - Firebase SDK V5.4.1](https://dl.google.com/firebase/sdk/ios/5_4_1/Firebase-5.4.1.zip).
-  * Invites/GoogleSignIn.framework
-  * Invites/GTMSessionFetcher.framework
-  * Invites/GTMOAuth2.framework
-  * Analytics/GoogleToolboxForMac.framework
-* On the iOS side, you need to make sure you have included the resource, "GoogleSignIn.bundle" at the root of you package. Find it in [Firebase SDK V5.4.1](https://dl.google.com/firebase/sdk/ios/5_4_1/Firebase-5.4.1.zip) at ```Invites/Resources/GoogleSignIn.bundle```
-* Android API 15 or higher
-* iOS SDK 9.0 or higher
+* On the iOS side, you will need to copy the following frameworks to your ```AIR_SDK/lib/aot/stub``` folder. Download them from [this package - Firebase SDK V5.20.2](https://dl.google.com/firebase/sdk/ios/5_20_2/Firebase-5.20.2.zip).
+  * Firebase/Invites/GoogleSignIn.framework
+  * Firebase/Invites/GTMSessionFetcher.framework
+  * Firebase/Invites/GoogleToolboxForMac.framework
+* On the iOS side, you need to make sure you have included the resource, "GoogleSignIn.bundle" at the root of you package. Find it in [Firebase SDK V5.20.2](https://dl.google.com/firebase/sdk/ios/5_20_2/Firebase-5.20.2.zip) at ```Firebase/Invites/Resources/GoogleSignIn.bundle```
+* Android API 19 or higher
+* iOS SDK 10.0 or higher
 * AIR SDK 30.0
 
 # Commercial Version
