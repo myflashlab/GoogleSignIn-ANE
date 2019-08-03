@@ -146,7 +146,7 @@ FOR ANDROID:
 	
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-	<uses-sdk android:targetSdkVersion="26"/>
+	<uses-sdk android:targetSdkVersion="28"/>
 	
 	<application android:name="android.support.multidex.MultiDexApplication">
 		

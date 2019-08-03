@@ -1,5 +1,9 @@
 GoogleSignIn Air Native Extension
 
+*Aug 3, 2019 - V2.0.1*
+* Added Android 64-bit Support
+* Removed **.os** property, use ```OverrideAir.os``` instead
+
 *Jun 16, 2019 - V2.0.0*
 * updated Android dependencies to V16.0.1
 * updated to GoogleSignin iOS SDK V4.4.0 which is synced with Firebase ANEs collection V8.x.x, you should copy the following frameworks to your ```AIR SDK/lib/aot/stub```. [Get the frameworks from Firebase iOS SDK V5.20.2](https://dl.google.com/firebase/sdk/ios/5_20_2/Firebase-5.20.2.zip).
