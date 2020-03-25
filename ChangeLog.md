@@ -1,8 +1,11 @@
 GoogleSignIn Air Native Extension
 
-*Aug 3, 2019 - V2.0.1*
+*Dec 28, 2019 - V3.0.0*
+- Add androidx dependencies instead of android support
+
+*Aug 03, 2019 - V2.0.1*
 * Added Android 64-bit Support
-* Removed **.os** property, use ```OverrideAir.os``` instead
+* Removed **.os** property, use `OverrideAir.os` instead
 
 *Jun 16, 2019 - V2.0.0*
 * updated Android dependencies to V16.0.1

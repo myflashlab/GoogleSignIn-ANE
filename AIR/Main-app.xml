@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <application xmlns="http://ns.adobe.com/air/application/32.0">
-    <id>com.doitflash.googleSignin</id>
-    <versionNumber>2.0.1</versionNumber>
+    <id>com.doitflash.googleSignIn</id>
+    <versionNumber>3.0.0</versionNumber>
     <supportedProfiles>mobileDevice</supportedProfiles>
-    <filename>exGoogleSignin</filename>
-    <name>Google Signin</name>
+    <filename>exGoogleSignIn</filename>
+    <name>Google Sign In</name>
     <android>
         <manifestAdditions><![CDATA[<manifest android:installLocation="auto">
 	
@@ -68,7 +68,7 @@
 				<string>google</string>
 				<key>CFBundleURLSchemes</key>
 				<array>
-					<string>com.googleusercontent.apps.626036754783-rnrn732hrq66ev2h5g6475kj98rm2dh</string>
+					<string>com.googleusercontent.apps.626036754783-rnrn732hrq66ev2h5g6475kj98rm2dh0</string>
 				</array>
 			</dict>
 		</array>
@@ -107,9 +107,9 @@
 
         <!-- dependency ANEs, https://github.com/myflashlab/common-dependencies-ANE -->
         <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
-        <extensionID>com.myflashlab.air.extensions.dependency.androidSupport.arch</extensionID>
-        <extensionID>com.myflashlab.air.extensions.dependency.androidSupport.core</extensionID>
-        <extensionID>com.myflashlab.air.extensions.dependency.androidSupport.v4</extensionID>
+        <extensionID>com.myflashlab.air.extensions.dependency.androidx.arch</extensionID>
+        <extensionID>com.myflashlab.air.extensions.dependency.androidx.core</extensionID>
+        <extensionID>com.myflashlab.air.extensions.dependency.androidx.lifecycle</extensionID>
         <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.auth</extensionID>
         <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
         <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
