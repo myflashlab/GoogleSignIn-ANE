@@ -1,6 +1,6 @@
 GoogleSignIn Air Native Extension
 
-*Dec 28, 2019 - V3.0.0*
+*Apr 05, 2020 - V3.0.0*
 - Add androidx dependencies instead of android support
 
 *Aug 03, 2019 - V2.0.1*

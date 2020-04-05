@@ -210,9 +210,9 @@ Embedding the ANE:
 
         <!-- Download dependency ANEs from https://github.com/myflashlab/common-dependencies-ANE -->
         <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
-    	<extensionID>com.myflashlab.air.extensions.dependency.androidSupport.arch</extensionID>
-    	<extensionID>com.myflashlab.air.extensions.dependency.androidSupport.core</extensionID>
-    	<extensionID>com.myflashlab.air.extensions.dependency.androidSupport.v4</extensionID>
+    	<extensionID>com.myflashlab.air.extensions.dependency.androidx.arch</extensionID>
+        <extensionID>com.myflashlab.air.extensions.dependency.androidx.core</extensionID>
+        <extensionID>com.myflashlab.air.extensions.dependency.androidx.lifecycle</extensionID>
     	<extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.auth</extensionID>
     	<extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
     	<extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
@@ -222,14 +222,14 @@ Embedding the ANE:
 ```
 
 # Requirements
-* On the iOS side, you will need to copy the following frameworks to your ```AIR_SDK/lib/aot/stub``` folder. Download them from [this package - Firebase SDK V5.20.2](https://dl.google.com/firebase/sdk/ios/5_20_2/Firebase-5.20.2.zip).
+* On the iOS side, you will need to copy the following frameworks to your ```AIR_SDK/lib/aot/stub``` folder. Download them from [this package - Firebase SDK V6.5.0](https://dl.google.com/firebase/sdk/ios/6_5_0/Firebase-6.5.0.zip).
   * Firebase/Invites/GoogleSignIn.framework
   * Firebase/Invites/GTMSessionFetcher.framework
   * Firebase/Invites/GoogleToolboxForMac.framework
-* On the iOS side, you need to make sure you have included the resource, "GoogleSignIn.bundle" at the root of you package. Find it in [Firebase SDK V5.20.2](https://dl.google.com/firebase/sdk/ios/5_20_2/Firebase-5.20.2.zip) at ```Firebase/Invites/Resources/GoogleSignIn.bundle```
+* On the iOS side, you need to make sure you have included the resource, "GoogleSignIn.bundle" at the root of you package. Find it in [Firebase SDK V6.5.0](https://dl.google.com/firebase/sdk/ios/6_5_0/Firebase-6.5.0.zip) at ```Firebase/GoogleSignIn/Resources/GoogleSignIn.bundle```
 * Android API 19 or higher
 * iOS SDK 10.0 or higher
-* AIR SDK 30.0
+* AIR SDK 33.0
 
 # Commercial Version
 https://www.myflashlabs.com/product/google-signin-ane-adobe-air-native-extension/
