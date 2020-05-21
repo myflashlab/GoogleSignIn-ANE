@@ -222,11 +222,12 @@ Embedding the ANE:
 ```
 
 # Requirements
-* On the iOS side, you will need to copy the following frameworks to your ```AIR_SDK/lib/aot/stub``` folder. Download them from [this package - Firebase SDK V6.5.0](https://dl.google.com/firebase/sdk/ios/6_5_0/Firebase-6.5.0.zip).
-  * Firebase/Invites/GoogleSignIn.framework
-  * Firebase/Invites/GTMSessionFetcher.framework
-  * Firebase/Invites/GoogleToolboxForMac.framework
-* On the iOS side, you need to make sure you have included the resource, "GoogleSignIn.bundle" at the root of you package. Find it in [Firebase SDK V6.5.0](https://dl.google.com/firebase/sdk/ios/6_5_0/Firebase-6.5.0.zip) at ```Firebase/GoogleSignIn/Resources/GoogleSignIn.bundle```
+* On the iOS side, you will need to copy the following frameworks to your ```AIR_SDK/lib/aot/stub``` folder. Download them from [this package - Firebase SDK V6.18.0](https://dl.google.com/firebase/sdk/ios/6_18_0/Firebase-6.18.0.zip).
+  * Firebase/GoogleSignIn/AppAuth.framework
+  * Firebase/GoogleSignIn/GoogleSignIn.framework
+  * Firebase/GoogleSignIn/GTMAppAuth.framework
+  * Firebase/GoogleSignIn/GTMSessionFetcher.framework
+* On the iOS side, you need to make sure you have included the resource, "GoogleSignIn.bundle" at the root of you package. Find it in [Firebase SDK V6.18.0](https://dl.google.com/firebase/sdk/ios/6_18_0/Firebase-6.18.0.zip) at ```Firebase/GoogleSignIn/Resources/GoogleSignIn.bundle```
 * Android API 19 or higher
 * iOS SDK 10.0 or higher
 * AIR SDK 33.0

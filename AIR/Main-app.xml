@@ -105,6 +105,9 @@
 
         <extensionID>com.myflashlab.air.extensions.google.signin</extensionID>
 
+		<!-- FirebaseCore ANE -->
+        <extensionID>com.myflashlab.air.extensions.firebase.core</extensionID>
+
         <!-- dependency ANEs, https://github.com/myflashlab/common-dependencies-ANE -->
         <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
         <extensionID>com.myflashlab.air.extensions.dependency.androidx.arch</extensionID>

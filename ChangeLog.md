@@ -1,5 +1,9 @@
 GoogleSignIn Air Native Extension
 
+*May 21, 2020 - v4.0.0*
+- Upgrade GoogleSignin iOS SDK to v5.0.2 which is synced with Firebase ANEs collection v9.9.0.
+- Adds dependencies on `AppAuth` and `GTMAppAuth` instead of the dependency on `GoogleToolboxForMac` for iOS.
+
 *Apr 05, 2020 - V3.0.0*
 - Add androidx dependencies instead of android support
 
