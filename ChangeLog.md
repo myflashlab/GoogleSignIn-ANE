@@ -1,4 +1,8 @@
-GoogleSignIn Air Native Extension
+# GoogleSignIn Air Native Extension
+
+*Jul 30, 2020 - v5.0.0*
+- Upgrade Android dependencies to the latest versions.
+- Fixed some minor issues and refactor native codes.
 
 *May 24, 2020 - v4.0.2*
 - Fix an issue related to Firebase dependencies.
